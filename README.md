@@ -1,1 +1,1 @@
-# structure
+# The Structure of Type
