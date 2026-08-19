@@ -1,4 +1,4 @@
-# The Structure of Type
+# On the Structure of Type
 
 A letter is a word from another alphabet. More specifically, a letter is a word from a spatial alphabet.
 
