@@ -1,150 +1,47 @@
 # **On the Structure of Type**<br>An Essay Towards a Formal Definition<br>*by Johannes Krtek*
 
-A glyph is a word from another alphabet. More specifically, a glyph is a word from a *spatial alphabet*. Its symbols are bound to the space we inhabit.
+A glyph is a word from another alphabet. More specifically, a glyph is a word from a *spatial alphabet*. Its symbols represent discrete directions of the space we inhabit.
 
-Yet these symbols can be described in terms of an even more fundamental alphabet: the *alphabet of change*. We only need three symbols: rising, falling, and steady.
+
+Together, these 26 directions form the *spatial alphabet* <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝒜</mi></math>:
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>𝒜</mi>
-    <mi>C</mi>
-  </msub>
+  <mi>𝒜</mi>
   <mo>=</mo>
   <mo>{</mo>
-  <mo>╱</mo>
+  <mrow>
+    <mi>a</mi><msub><mi>𝒗</mi><mi>x</mi></msub>
+    <mo>+</mo>
+    <mi>b</mi><msub><mi>𝒗</mi><mi>y</mi></msub>
+    <mo>+</mo>
+    <mi>c</mi><msub><mi>𝒗</mi><mi>z</mi></msub>
+  </mrow>
+  <mo>|</mo>
+  <mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>
+  <mo>∈</mo>
+  <mo>{</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>}</mo>
   <mo>,</mo>
-  <mo>╲</mo>
-  <mo>,</mo>
-  <mo>⸺</mo>
+  <mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>)</mo>
+  <mo>≠</mo>
+  <mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo>
   <mo>}</mo>
 </math>
 
-Hence a *word of change* is represented as a sequence of states over the Alphabet
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mi>𝒜</mi>
-    <mi>C</mi>
-  </msub>
-</math>:
+Hence a *spatial word* is represented as a sequence of vectors over the Alphabet <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>𝒜</mi></math>:
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>W</mi>
   <mo>=</mo>
   <mo>(</mo>
-  <mo>╲</mo>
-  <mo>╲</mo>
-  <mo>╱</mo>
-  <mo>╲</mo>
-  <mo>╱</mo>
-  <mo>╱</mo>
-  <mo>╲</mo>
-  <mo>╱</mo>
+  <mo>(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>,</mo>
+  <mo>(</mo><mn>1</mn><mo>,</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>,</mo>
+  <mo>(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>,</mo>
+  <mo>(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
   <mo>)</mo>
 </math>
-
-The word is meant to describe spatial changes, hence the sequence contains interleaved states of orthogonal dimensions. We can therefore serialize these states dimension-wise:
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>W</mi>
-    <mi>xy</mi>
-  </msub>
-  <mo>=</mo>
-  <mo>(</mo>
-  <mo>╲</mo>
-  <mo>╱</mo>
-  <mo>╱</mo>
-  <mo>╲</mo>
-  <mo lspace="0.15em" rspace="0.15em">,</mo>
-  <mo>╲</mo>
-  <mo>╲</mo>
-  <mo>╱</mo>
-  <mo>╱</mo>
-  <mo>)</mo>
-</math>
-
-And further map the discrete states onto a continuous phase representation:
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>W</mi>
-    <mrow>
-      <msub><mi>φ</mi><mi>x</mi></msub>
-      <msub><mi>φ</mi><mi>y</mi></msub>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mo>[</mo>
-  <mn>0</mn>
-  <mo>,</mo>
-  <mn>2</mn>
-  <mi>π</mi>
-  <mo>]</mo>
-  <mo>×</mo>
-  <mo>[</mo>
-  <mn>0</mn>
-  <mo>,</mo>
-  <mn>2</mn>
-  <mi>π</mi>
-  <mo>]</mo>
-</math>
-
-Once we use these phase parameters in a triangular wave function, we finally move from a *word of change* to a *spatial word*:
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>W</mi>
-    <mi>S</mi>
-  </msub>
-  <mo>=</mo>
-  <mo>(</mo>
-  <mo lspace="0.03em" rspace="0.03em">−</mo><msub><mi>𝒗</mi><mi>x</mi></msub>
-  <mo>−</mo>
-  <msub><mi>𝒗</mi><mi>y</mi></msub>
-  <mo lspace="0em" rspace="0.3em">,</mo>
-  <mo lspace="0.03em" rspace="0.03em">−</mo><msub><mi>𝒗</mi><mi>y</mi></msub>
-  <mo lspace="0em" rspace="0.3em">,</mo>
-  <msub><mi>𝒗</mi><mi>x</mi></msub>
-  <mo lspace="0em" rspace="0.3em">,</mo>
-  <msub><mi>𝒗</mi><mi>x</mi></msub>
-  <mo>+</mo>
-  <msub><mi>𝒗</mi><mi>y</mi></msub>
-  <mo lspace="0em" rspace="0.3em">,</mo>
-  <msub><mi>𝒗</mi><mi>y</mi></msub>
-  <mo>−</mo>
-  <msub><mi>𝒗</mi><mi>x</mi></msub>
-  <mo>)</mo>
-</math>
-
-These vectors form the spatial alphabet <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub><mi>𝒜</mi><mi>S</mi></msub>
-</math>:
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>𝒜</mi>
-    <mi>S</mi>
-  </msub>
-  <mo>=</mo>
-  <mo>{</mo>
-  <mo>±</mo><msub><mi>𝒗</mi><mi>x</mi></msub>
-  <mo>,</mo>
-  <mo>±</mo><msub><mi>𝒗</mi><mi>y</mi></msub>
-  <mo>,</mo>
-  <mo>±</mo><mo>(</mo><msub><mi>𝒗</mi><mi>x</mi></msub><mo>+</mo><msub><mi>𝒗</mi><mi>y</mi></msub><mo>)</mo>
-  <mo>,</mo>
-  <mo>±</mo><mo>(</mo><msub><mi>𝒗</mi><mi>y</mi></msub><mo>−</mo><msub><mi>𝒗</mi><mi>x</mi></msub><mo>)</mo>
-  <mo>}</mo>
-</math>
-
-The *spatial word* is therefore a geometric realization of the *word of change*: its vectors are symbols of the *spatial alphabet* <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub><mi>𝒜</mi><mi>S</mi></msub>
-</math>, while their underlying phases originate in the alphabet of change <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mi>𝒜</mi>
-    <mi>C</mi>
-  </msub>
-</math>.
 
 Figure: left down, right down, right up, left up
 
