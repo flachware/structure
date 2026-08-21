@@ -182,6 +182,8 @@ Thus,
 
 Figure: the collapsed spatial word for the letter o
 
+**A glyph is a spatial graph. As a symbol, the graph becomes a spatial signal, a carrier of symbolic information.**
+
 <br><br><br><br><br><br><br>
 
 To make explicit the structure of the spatial word, we may translate it into mathematical symbols. The spatial word is thereby represented as the relation <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math> between points:
