@@ -1,20 +1,12 @@
-# **On the Structure of Type**<br>An Essay Towards a Formal Definition<br>*by Johannes Krtek*
+# **On the Structure of Type**<br>A Living Document Towards a Formal Definition<br>*by Johannes Krtek*
 
-A glyph is a word from another alphabet. More specifically, a glyph is a word from a *spatial alphabet*. Its symbols represent directions in the space we inhabit.
+A glyph is a signal. Its structure is a word from a *spatial alphabet*, whose symbols are directions in the space we inhabit.
 
-First, we need space. Not just any space: its directions must be perceptually discriminable with ease. We therefore begin with the smallest discrete spatial unit: a single voxel.
-
-Figure: 1 voxel
-
-A single voxel represents merely a single state; there is no way to derive direction from it. We therefore add its neighbours, creating the smallest symmetric 3D space grid possible.
-
-Figure: space grid
-
-The resulting <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"> <mo>(</mo> <mn>3</mn> <mo>×</mo> <mn>3</mn> <mo>×</mo> <mn>3</mn> <mo>)</mo> </math> grid contains 27 states. With the central voxel as the reference state, the remaining 26 states define 26 discrete directions — coincidentally matching the 26 letters of the alphabet. This is our *spatial alphabet* <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>𝒜</mi></math>:
+First, we need space. Not just any space: its directions must be perceptually discriminable with ease. We therefore begin with the smallest discrete spatial unit: a single voxel. A single voxel represents merely a single state; there is no way to derive direction from it. We therefore add its neighbours, creating the smallest symmetric 3D space grid possible. The resulting <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"> <mo>(</mo> <mn>3</mn> <mo>×</mo> <mn>3</mn> <mo>×</mo> <mn>3</mn> <mo>)</mo> </math> grid contains 27 states. With the central voxel as the reference state, the remaining 26 states define 26 discrete directions — coincidentally matching the 26 letters of the alphabet. This is our *spatial alphabet* <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>𝒜</mi></math>:
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <mi>𝒜</mi> <mo>=</mo> <msup> <mrow> <mo>{</mo> <mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn> <mo>}</mo> </mrow> <mn>3</mn> </msup> <mo>∖</mo> <mo>{</mo> <mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo> <mo>}</mo> </math>
 
-Figure: All voxels
+Figure: space grid
 
 Hence, a *spatial word* is a sequence of spatial states, represented by voxels:
 
@@ -28,9 +20,7 @@ These states can be expressed as vectors over the alphabet <math xmlns="http://w
   <mo>(</mo>
   <mo>(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
   <mo>,</mo>
-  <mo>(</mo><mn>1</mn><mo>,</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
-  <mo>,</mo>
-  <mo>(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo>
   <mo>,</mo>
   <mo>(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo>
   <mo>)</mo>
